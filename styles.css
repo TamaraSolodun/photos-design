@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;700&display=swap');
+
+* {
+    font-family: 'Commissioner', sans-serif;
+}
+
+/* Dark theme styles */
+body.dark {
+    background-color: #333;
+    color: #f0f0f0;
+}
+.body.dark .nav-tabs .nav-link, body.dark .nav-tabs a{
+    color: #666666 !important;
+}
+
+body.dark .btn-outline-dark{
+    color: #f0f0f0;
+}
+
+body.dark .btn-outline-primary{
+    border-color: #333;
+}
+
+body.dark .card{
+    background-color: inherit;
+    color: #f0f0f0;
+    border-color: #666666;
+}
+
+body.dark .card .show-more-btn {
+    color: #ED7135;
+}
+
+/* header */
+
+.nav-tabs {
+    border: none !important;
+    border-width: 0px !important;
+    background-color: inherit;
+}
+
+.nav-tabs .nav-link {
+    border-radius: 0px !important;
+    margin-bottom: 0;
+    border: 0px;
+    font-weight: 500;
+    color: #666666;
+    height: 72px;
+    padding: 14px 12px;
+    background-color: inherit;
+}
+
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    border: 0px;
+    color: #ED7135;
+}
+
+.nav-tabs .nav-link.active {
+    color: #666666;
+    border-bottom: 2px solid #ED7135;
+    border-width: 0px !important;
+    border-bottom-width: 2.5px !important;
+    font-weight: 700;
+    background-color: inherit;
+}
+
+.search-input {
+    background-color: #EEEEEE;
+    max-width: 100%;
+    min-width: 546px;
+}
+
+.form-check-input:checked{
+    background-color: #ED7135;
+    border-color: #ED7135;
+}
+
+/* aside */
+
+aside .nav-link {
+    color: #666666;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+
+aside .nav-pills .nav-link.active {
+    background-color: #ED7135;
+    border-radius: 8px;
+}
+
+aside .nav-link:focus,
+aside .nav-link:hover {
+    color: #ED7135;
+}
+
+/* main */
+main .cards-container {
+    margin-left: 100px;
+}
+
+main p {
+    color: #666666;
+}
+
+main .btn {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+
+.card {
+    width: 356px;
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    transition: box-shadow .3s ease;
+}
+.card:hover{
+    box-shadow: 0 3px 6px rgba(0,0,0,.102);
+    cursor: pointer;
+}
+
+.card-footer:last-child {
+    border-radius: 0 0 8px 8px;
+
+}
+
+.card .btn-primary {
+    background-color: #ED7135;
+    border: none;
+    font-weight: 500;
+}
+
+.card .btn-outline-primary {
+    border: 2px solid #EBEBEB;
+    font-weight: 500;
+    color: #666666;
+}
+.card-img, .card-img-top{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.card .btn-outline-primary:hover,
+.card .btn-outline-primary:focus {
+    border: 2px solid #ED7135;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: #ED7135;
+}
+
+/* CSS для обмеження тексту у картках до двох рядків */
+.card-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 1s ease-in;
+
+}
+
+/* CSS для розгортання тексту при натисканні на кнопку "show more" */
+.card-body.expanded .card-text {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: unset;
+}
+
+.card .show-more-btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.card .show-more-btn:hover {
+    color: #ED7135;
+}
+
+.card .card-footer {
+    background-color: inherit;
+}
+
+
+@media (max-width: 1200px) {
+    main {
+        flex-direction: column;
+    }
+
+    .aside-nav {
+        width: 100% !important;
+        flex-direction: row !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .aside-nav .nav {
+        flex-direction: row !important;
+
+    }
+
+    .aside-nav .nav-item {
+        width: fit-content;
+    }
+
+    .cards-container {
+        margin-left: 0 !important;
+    }
+
+    #image-container {
+        justify-content: center !important;
+    }
+}
